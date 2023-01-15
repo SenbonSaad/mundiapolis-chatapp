@@ -2,13 +2,14 @@ import React, { useContext } from 'react'
 import {signOut} from "firebase/auth"
 import { auth } from '../firebase'
 import { AuthContext } from '../context/AuthContext'
+import Logo from "../img/logo-mundia.png";
 
 const Navbar = () => {
   const {currentUser} = useContext(AuthContext)
 
   return (
     <div className='navbar'>
-      <span className="logo">Mundia Chat</span>
+      <img src={Logo} alt="" style={{ width:"30px" , height:"30px" }}/><span className="logo"> Mundia Chat</span>
       <div className="user">
         <img src={currentUser.photoURL} alt="" />
         <span>{currentUser.displayName}</span>

@@ -5,6 +5,7 @@ import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
+import Logo from "../img/logo-mundia.png";
 
 const Register = () => {
   const [err, setErr] = useState(false);
@@ -62,6 +63,7 @@ const Register = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
+      <img src={Logo} alt="" style={{ width:"30px" , height:"30px" }}/>
         <span className="logo">Mundia Chat</span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>

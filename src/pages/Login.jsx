@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import Logo from "../img/logo-mundia.png";
 
 const Login = () => {
   const [err, setErr] = useState(false);
@@ -22,6 +23,7 @@ const Login = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
+      <img src={Logo} alt="" style={{ width:"30px" , height:"30px" }}/>
         <span className="logo">Mundia Chat</span>
         <span className="title">Login</span>
         <form onSubmit={handleSubmit}>
